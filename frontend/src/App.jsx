@@ -4,20 +4,19 @@ import { Thermometer, Droplets, Cloud, FlaskConical, Sun } from 'lucide-react';
 
 const API_URL = "https://8pkac0pg3d.execute-api.us-east-2.amazonaws.com";
 
-// 1. EL COMPONENTE ESTÁ AFUERA (¡Adiós al parpadeo molesto!)
 const IndicadorGauge = ({ titulo, valor, unidad, minGrafico, maxGrafico, limiteInf, limiteSup, tipo, Icono, colorIcono }) => {
   let subArcs = [];
   
   if (tipo === 'rango' && limiteInf !== undefined && limiteSup !== undefined) {
     subArcs = [
-      { limit: limiteInf, color: '#3b82f6' }, // Azul
-      { limit: limiteSup, color: '#10b981' }, // Verde
+      { limit: limiteInf, color: '#3b82f6' }, 
+      { limit: limiteSup, color: '#10b981' }, 
       { color: '#ef4444' } // Rojo
     ];
   } else if (tipo === 'tope' && limiteSup !== undefined) {
     subArcs = [
-      { limit: limiteSup, color: '#10b981' }, // Verde
-      { color: '#ef4444' } // Rojo
+      { limit: limiteSup, color: '#10b981' }, 
+      { color: '#ef4444' } 
     ];
   } else {
     subArcs = [{ limit: maxGrafico, color: '#334155' }];
@@ -26,7 +25,7 @@ const IndicadorGauge = ({ titulo, valor, unidad, minGrafico, maxGrafico, limiteI
   return (
     <div className="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 flex flex-col items-center justify-between transition-all hover:border-slate-500">
       
-      {/* Encabezado con Icono Dinámico */}
+      
       <div className="flex items-center justify-center gap-3 mb-6">
         <Icono className={`w-6 h-6 ${colorIcono}`} />
         <h3 className="text-sm font-semibold text-slate-300 tracking-wider uppercase">{titulo}</h3>
