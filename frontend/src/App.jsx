@@ -25,7 +25,7 @@ const IndicadorGauge = ({ titulo, valor, unidad, minGrafico, maxGrafico, limiteI
   return (
     <div className="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 flex flex-col items-center justify-between transition-all hover:border-slate-500">
       
-      
+      {/* Encabezado con Icono Dinámico */}
       <div className="flex items-center justify-center gap-3 mb-6">
         <Icono className={`w-6 h-6 ${colorIcono}`} />
         <h3 className="text-sm font-semibold text-slate-300 tracking-wider uppercase">{titulo}</h3>
