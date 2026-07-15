@@ -11,7 +11,7 @@ const IndicadorGauge = ({ titulo, valor, unidad, minGrafico, maxGrafico, limiteI
     subArcs = [
       { limit: limiteInf, color: '#3b82f6' }, 
       { limit: limiteSup, color: '#10b981' }, 
-      { color: '#ef4444' } // Rojo
+      { color: '#ef4444' } 
     ];
   } else if (tipo === 'tope' && limiteSup !== undefined) {
     subArcs = [
@@ -44,7 +44,7 @@ const IndicadorGauge = ({ titulo, valor, unidad, minGrafico, maxGrafico, limiteI
             color: "#ef4444", 
             length: 0.8,
             width: 12,
-            animationDelay: 0, // Animación instantánea
+            animationDelay: 0, 
           }}
           labels={{
             valueLabel: {
@@ -73,7 +73,6 @@ const IndicadorGauge = ({ titulo, valor, unidad, minGrafico, maxGrafico, limiteI
   );
 };
 
-// 2. LA APLICACIÓN PRINCIPAL
 function App() {
   const [etapa, setEtapa] = useState('pollitos_semana_1');
   const [config, setConfig] = useState(null);
@@ -126,7 +125,6 @@ function App() {
   const configSegura = config || {};
 
   return (
-    // CAMBIO A PANTALLA COMPLETA: max-w-full en lugar de max-w-7xl
     <div className="min-h-screen bg-slate-900 p-4 md:p-6 font-sans text-slate-100">
       <div className="max-w-full mx-auto">
         
