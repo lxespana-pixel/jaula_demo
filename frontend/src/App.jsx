@@ -201,7 +201,7 @@ function App() {
             titulo="Amoníaco (NH3)" 
             valor={getValor('amoniaco')} 
             unidad="ppm" 
-            minGrafico={0} maxGrafico={100}
+            minGrafico={0} maxGrafico={50}
             limiteSup={configSegura.amon_max}
             tipo="tope"
             Icono={FlaskConical}
@@ -212,7 +212,7 @@ function App() {
             titulo="Luminosidad" 
             valor={getValor('luminosidad')} 
             unidad="lx" 
-            minGrafico={0} maxGrafico={500}
+            minGrafico={0} maxGrafico={100}
             limiteInf={configSegura.luz_min} limiteSup={configSegura.luz_max}
             tipo="rango"
             Icono={Sun}
