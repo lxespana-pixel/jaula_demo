@@ -112,7 +112,7 @@ function App() {
 
   useEffect(() => {
     obtenerSensores();
-    const intervalo = setInterval(obtenerSensores, 5000);
+    const intervalo = setInterval(obtenerSensores, 2000);
     return () => clearInterval(intervalo);
   }, []);
 
